@@ -8,11 +8,10 @@
   (= 0 (mod number 5)))
 
 (defn- fizzbuzz-number [number]
-  (if (fizz? number)
-    "Fizz"
-    (if (buzz? number)
-      "Buzz"
-      (str number))))
+  (cond
+    (fizz? number) "Fizz"
+    (buzz? number) "Buzz"
+    :else (str number)))
 
 (defn fizzbuzz []
   (map #(fizzbuzz-number %) (range 1 100)))
