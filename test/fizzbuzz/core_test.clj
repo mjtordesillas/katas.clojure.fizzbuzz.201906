@@ -3,5 +3,6 @@
             [fizzbuzz.core :refer :all]))
 
 (deftest fizzbuzz-test
-  (testing "One is returned as one"
-    (is (= (nth (fizzbuzz) 0) "1"))))
+  (testing "A number that is not Fizz or Buzz will be returned as itself"
+    (is (= (nth (fizzbuzz) 0) "1"))
+    (is (= (nth (fizzbuzz) 22) "23"))))

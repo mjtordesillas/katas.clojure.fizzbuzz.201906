@@ -2,4 +2,4 @@
   (:gen-class))
 
 (defn fizzbuzz []
-   ["1"])
+   (map #(str %) (range 1 100)))
