@@ -8,4 +8,7 @@
     (is (= (nth (fizzbuzz) 22) "23")))
   (testing "A number that is a multiple of 3 is Fizz"
     (is (= (nth (fizzbuzz) 2) "Fizz"))
-    (is (= (nth (fizzbuzz) 8) "Fizz"))))
+    (is (= (nth (fizzbuzz) 8) "Fizz")))
+  (testing "A number that is a multiple of 5 is Buzz"
+    (is (= (nth (fizzbuzz) 4) "Buzz"))
+    (is (= (nth (fizzbuzz) 24) "Buzz"))))
