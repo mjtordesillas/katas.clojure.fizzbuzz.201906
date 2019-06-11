@@ -1,8 +1,9 @@
 (ns fizzbuzz.core
-  (:gen-class))
+  (:gen-class)
+  (:require [clojure.string :as string]))
 
 (defn- fizz? [number]
-  (= 0 (mod number 3)))
+  (or (= 0 (mod number 3)) (string/includes? (str number) (str 3))))
 
 (defn- buzz? [number]
   (= 0 (mod number 5)))
