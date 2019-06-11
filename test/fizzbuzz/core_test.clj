@@ -14,4 +14,6 @@
     (is (= (nth (fizzbuzz) 24) "Buzz")))
   (testing "A number that is a multiple of 3 and 5 is FizzBuzz"
     (is (= (nth (fizzbuzz) 29) "FizzBuzz"))
-    (is (= (nth (fizzbuzz) 14) "FizzBuzz"))))
+    (is (= (nth (fizzbuzz) 14) "FizzBuzz")))
+  (testing "Returns 100 numbers")
+    (is (= (count (fizzbuzz)) 100)))

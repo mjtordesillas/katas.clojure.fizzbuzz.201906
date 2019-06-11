@@ -18,4 +18,4 @@
     :else (str number)))
 
 (defn fizzbuzz []
-  (map #(fizzbuzz-number %) (range 1 100)))
+  (map #(fizzbuzz-number %) (range 1 101)))
