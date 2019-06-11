@@ -2,11 +2,14 @@
   (:gen-class)
   (:require [clojure.string :as string]))
 
+(defn- contains-digit? [number digit]
+  (string/includes? (str number) (str digit)))
+
 (defn- fizz? [number]
-  (or (= 0 (mod number 3)) (string/includes? (str number) (str 3))))
+  (or (= 0 (mod number 3)) (contains-digit? number 3)))
 
 (defn- buzz? [number]
-  (or (= 0 (mod number 5)) (string/includes? (str number) (str 5))))
+  (or (= 0 (mod number 5)) (contains-digit? number 5)))
 
 (defn fizzbuzz? [number]
   (and (fizz? number) (buzz? number)))
