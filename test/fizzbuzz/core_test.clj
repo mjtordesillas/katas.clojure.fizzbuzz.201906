@@ -19,5 +19,11 @@
   (testing "A number that is a multiple of 3 and 5 is FizzBuzz"
     (is (= "FizzBuzz" (nth (fizzbuzz) 29)))
     (is (= "FizzBuzz" (nth (fizzbuzz) 14))))
+  (testing "A number that is a multiple of 3 and contains 5 is FizzBuzz"
+    (is (= "FizzBuzz" (nth (fizzbuzz) 50))))
+  (testing "A number that is a multiple of 5 and contains 3 is FizzBuzz"
+    (is (= "FizzBuzz" (nth (fizzbuzz) 34))))
+  (testing "A number that contains 5 and 3 is FizzBuzz"
+    (is (= "FizzBuzz" (nth (fizzbuzz) 52))))
   (testing "Returns 100 numbers")
     (is (= 100 (count (fizzbuzz)))))
