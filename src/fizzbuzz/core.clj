@@ -5,11 +5,14 @@
 (defn- contains-digit? [number digit]
   (string/includes? (str number) (str digit)))
 
+(defn- is-multiple? [number denominator]
+  (= 0 (mod number denominator)))
+
 (defn- fizz? [number]
-  (or (= 0 (mod number 3)) (contains-digit? number 3)))
+  (or (is-multiple? number 3) (contains-digit? number 3)))
 
 (defn- buzz? [number]
-  (or (= 0 (mod number 5)) (contains-digit? number 5)))
+  (or (is-multiple? number 5) (contains-digit? number 5)))
 
 (defn fizzbuzz? [number]
   (and (fizz? number) (buzz? number)))
