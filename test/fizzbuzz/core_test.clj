@@ -4,18 +4,18 @@
 
 (deftest fizzbuzz-test
   (testing "A number that is not Fizz or Buzz will be returned as itself"
-    (is (= (nth (fizzbuzz) 0) "1"))
-    (is (= (nth (fizzbuzz) 25) "26")))
+    (is (= "1" (nth (fizzbuzz) 0)))
+    (is (= "26" (nth (fizzbuzz) 25))))
   (testing "A number that is a multiple of 3 or contains a 3 is Fizz"
-    (is (= (nth (fizzbuzz) 2) "Fizz"))
-    (is (= (nth (fizzbuzz) 8) "Fizz"))
-    (is (= (nth (fizzbuzz) 12) "Fizz"))
-    (is (= (nth (fizzbuzz) 22) "Fizz")))
+    (is (= "Fizz" (nth (fizzbuzz) 2)))
+    (is (= "Fizz" (nth (fizzbuzz) 8)))
+    (is (= "Fizz" (nth (fizzbuzz) 12)))
+    (is (= "Fizz" (nth (fizzbuzz) 22))))
   (testing "A number that is a multiple of 5 is Buzz"
-    (is (= (nth (fizzbuzz) 4) "Buzz"))
-    (is (= (nth (fizzbuzz) 24) "Buzz")))
+    (is (= "Buzz" (nth (fizzbuzz) 4)))
+    (is (= "Buzz" (nth (fizzbuzz) 24))))
   (testing "A number that is a multiple of 3 and 5 is FizzBuzz"
-    (is (= (nth (fizzbuzz) 29) "FizzBuzz"))
-    (is (= (nth (fizzbuzz) 14) "FizzBuzz")))
+    (is (= "FizzBuzz" (nth (fizzbuzz) 29)))
+    (is (= "FizzBuzz" (nth (fizzbuzz) 14))))
   (testing "Returns 100 numbers")
-    (is (= (count (fizzbuzz)) 100)))
+    (is (= 100 (count (fizzbuzz)))))
