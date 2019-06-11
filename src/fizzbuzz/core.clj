@@ -6,7 +6,7 @@
   (or (= 0 (mod number 3)) (string/includes? (str number) (str 3))))
 
 (defn- buzz? [number]
-  (= 0 (mod number 5)))
+  (or (= 0 (mod number 5)) (string/includes? (str number) (str 5))))
 
 (defn fizzbuzz? [number]
   (and (fizz? number) (buzz? number)))
